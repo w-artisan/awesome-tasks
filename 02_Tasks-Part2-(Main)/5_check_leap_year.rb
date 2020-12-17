@@ -4,15 +4,13 @@
 # або він ділиться на 4, але при цьому не ділиться на 100, або ділиться на 400.
 
 def check_leap_year(year)
-  if (year % 400).zero?
-    puts 'the year is leap #1'
-  elsif (year % 100).positive? && (year % 4).zero?
-    puts 'the year is leap #2'
+  if (year % 400).zero? || ((year % 100).positive? && (year % 4).zero?)
+    puts 'the year is leap'
   else
     puts 'the year is not leap'
   end
 end
 
-check_leap_year(2000) #=> 'the year is leap #1'
-check_leap_year(2044) #=> 'the year is leap #2'
+check_leap_year(2000) #=> 'the year is leap'
+check_leap_year(2044) #=> 'the year is leap'
 check_leap_year(2003) #=> 'the year is not leap'
