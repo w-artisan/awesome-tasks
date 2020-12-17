@@ -4,11 +4,7 @@
 # зі значеннями - 5, 0, -3, 2
 
 def check_number_range(num)
-  if num.positive? && num < 5
-    puts 'Вірно'
-  else
-    puts 'Невірно'
-  end
+  puts num.between?(1, 4) ? 'Вірно' : 'Невірно'
 end
 
 check_number_range(-5) #=> 'Невірно'
