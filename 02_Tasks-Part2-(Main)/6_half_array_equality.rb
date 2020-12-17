@@ -9,7 +9,7 @@ def half_array_equality(num)
   # Split array to two independent arrays and assign to variables 'left' and 'right'
   left, right = num.each_slice((num.size / 2.0).round).to_a
   # Convert each element of array to integer and compare sum of elements
-  left.map(&:to_i).sum == right.map(&:to_i).sum ? (puts 'так') : (puts 'ні')
+  puts left.map(&:to_i).sum == right.map(&:to_i).sum ? 'так' : 'ні'
 end
 
 half_array_equality(385385) #=> 'так'
