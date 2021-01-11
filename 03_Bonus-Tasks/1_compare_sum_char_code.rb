@@ -17,9 +17,13 @@
 # Your method should return true, if the strings are equal and false if they are not equal.
 
 def compare_sum_char_code(chars1, chars2)
+  chars1 = '' unless chars1&.match?(/\A[a-zA-Z]+\z/)
+  chars2 = '' unless chars2&.match?(/\A[a-zA-Z]+\z/)
+
   num1 = chars1.to_s.upcase.split('').map(&:ord).sum
   num2 = chars2.to_s.upcase.split('').map(&:ord).sum
-  num2.zero? ? true : num1 == num2
+
+  num1 == num2
 end
 
 def bool_to_equality(bool)
